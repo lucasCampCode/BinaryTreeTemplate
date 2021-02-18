@@ -13,7 +13,7 @@ void TreeNode::draw(int x, int y, bool selected)
 
 	sprintf(buffer, "%d", m_value);
 
-	DrawCircle(x, y, 20, YELLOW);
+	DrawCircle(x, y, 30, YELLOW);
 	if (selected)
 		DrawCircle(x, y, 28, GREEN);
 	else
