@@ -36,7 +36,7 @@ void BinaryTree::insert(int value)
 		}
 		//If the value is the same as a value already in the list return 
 		else if (value == current->getData()) {
-			return;
+			newNode = nullptr;
 		}
 	}
 	//end loop
@@ -97,7 +97,7 @@ void BinaryTree::remove(int value)
 				minNodeP->setRight(minNode->getRight());
 
 		//Delete the first iterator
-			delete minNode;
+			minNode = nullptr;
 	}
 	//Otherwise, if the node doesn't have a right child
 	else 
