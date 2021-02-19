@@ -36,7 +36,7 @@ void BinaryTree::insert(int value)
 		}
 		//If the value is the same as a value already in the list return 
 		else if (value == current->getData()) {
-			newNode = nullptr;
+			return;
 		}
 	}
 	//end loop
@@ -63,11 +63,11 @@ void BinaryTree::remove(int value)
 	if (current->hasRight())
 	{
 		//Initialize two iterators to find the node whose data will be copied and its parent.
-		TreeNode* minNode = nullptr;
+		TreeNode* minNode = current;
 
 		//Set the first iterator to point to the right child of the node we want to remove.
-		minNode = current->getRight();
 		TreeNode* minNodeP = minNode;
+		minNode = minNode->getRight();
 
 		//Loop while the first iterator has a value to its left
 		while (minNode->hasLeft()) 
@@ -124,10 +124,6 @@ void BinaryTree::remove(int value)
 		//Delete the pointer that points to the node to remove.
 		delete current;
 	}
-
-			
-
-
 }
 
 TreeNode* BinaryTree::find(int value)
