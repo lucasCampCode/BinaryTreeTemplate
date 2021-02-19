@@ -67,7 +67,6 @@ int main(int argc, char* argv[])
         {
             // Implement the code to insert valueBoxValue into your binary tree here! 
             binaryTree.insert(valueBoxValue);
-            selectedNode = binaryTree.find(valueBoxValue);
         }
 
         if (GuiButton(Rectangle{ 160, 60, 125, 30 }, GuiIconText(RICON_CROSS, "Remove")))
@@ -77,6 +76,7 @@ int main(int argc, char* argv[])
         }
 
         // draw the binary tree
+        selectedNode = binaryTree.find(valueBoxValue);
         binaryTree.draw(selectedNode);
         EndDrawing();
         //----------------------------------------------------------------------------------

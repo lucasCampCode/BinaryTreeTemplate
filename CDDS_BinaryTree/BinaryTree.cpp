@@ -138,11 +138,11 @@ TreeNode* BinaryTree::find(int value)
 			return current;
 		//Return the iterator
 	//If the node doesn't have the data we want, check to see if it's higher in value.
-		else if (current->getData() > value)
+		else if (current->getData() < value)
 			current = current->getRight();
 		//Set the iterator to be its current right child.
 	//If the node doesn't have the data we want, check to see if it's lower in value.
-		else if (current->getData() < value)
+		else if (current->getData() > value)
 			current = current->getLeft();
 		//Set the iterator to be its current left child.
 //end loop
